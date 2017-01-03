@@ -2,16 +2,16 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\Authenticatable;
+
 use Illuminate\Database\Eloquent\Model;
 
-class Like extends Model implements Authenticatable {
-    use \Illuminate\Auth\Authenticatable;
-    public function posts() {
-    	return $this->hasMany('App\Post');
+class Like extends Model  {
+   
+    public function user() {
+    	return $this->belongsTo('App\User');
     }
 
-    public function likes () {
-    	return $this->hasMany('App\Like');
+    public function post () {
+    	return $this->belongsTo('App\Post');
     }
 }
