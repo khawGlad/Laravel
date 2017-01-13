@@ -32,9 +32,9 @@ Route::group(['middleware' => ['web']], function () {
 		'as' => 'logout'
 		]);
 
-	Route::get('/account', [
+	Route::get('/profile', [
 		'uses' => 'UserController@getAccount',
-		'as' => 'account'
+		'as' => 'profile'
 		]); 
 
 	Route::post('/updateaccount', [
