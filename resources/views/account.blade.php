@@ -1,13 +1,13 @@
 @extends('layouts.master')
 
 @section('title')
-	Account
+	Profile
 @endsection
 
 @section('content')
 <section class="row new-post">
 	<div class="col-md-6 col-md-offset-3">
-		<header><h3>Your Account</h3></header>
+		<header><h3>Profile</h3></header>
 			<form action="{{ route('account.save') }}" method="post" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="first_name">First Name</label>
